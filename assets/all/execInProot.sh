@@ -2,12 +2,6 @@
 
 $ROOT_PATH/support/busybox clear
 
-if [[ ! -r /dev/ashmem ]] ; then
-	EXTRA_BINDINGS="$EXTRA_BINDINGS -b $ROOTFS_PATH/tmp:/dev/ashmem" 
-fi
-if [[ ! -r /dev/shm ]] ; then
-	EXTRA_BINDINGS="$EXTRA_BINDINGS -b $ROOTFS_PATH/tmp:/dev/shm" 
-fi
 if [[ ! -r /proc/stat ]] ; then
 	numProc="$($ROOT_PATH/support/busybox grep rocessor /proc/cpuinfo)"
 	numProc="${numProc: -1}"
