@@ -11,8 +11,8 @@ checkForServer() {
             echo "found vnc"
             exit 0
             ;;
-        *twm*)
-            echo "found twm"
+        *xterm*)
+            echo "found xsdl"
             exit 0
             ;;
     esac
